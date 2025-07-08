@@ -10,23 +10,23 @@ app.listen(port, ()=>{
 }) //ctrl + c is used to stop listening
 
 
-app.get("/",(req,res)=>{
-    res.send("you contacted home page");
-})
-app.get("/help",(req,res)=>{
-    res.send("you contacted help page");
-})
-app.get("/about",(req,res)=>{
-    res.send("you contacted about page");
-})
+// app.get("/",(req,res)=>{
+//     res.send("you contacted home page");
+// })
+// app.get("/help",(req,res)=>{
+//     res.send("you contacted help page");
+// })
+// app.get("/about",(req,res)=>{
+//     res.send("you contacted about page");
+// })
 
 // app.get("*",(req,res)=>{
 //     res.send("this page doesn't exist");
 // })
 
-app.post("/",(req,res)=>{
-    res.send("post request recieved");
-})
+// app.post("/",(req,res)=>{
+//     res.send("post request recieved");
+// })
 
 
 // app.use((req,res)=>{
@@ -35,3 +35,8 @@ app.post("/",(req,res)=>{
 
 //     res.send("this is a basic response");
 // })
+
+app.get("/:username/:id",(req,res)=>{
+    let{username,id}=req.params;
+    res.send(`welcome to page of @${username}.`);
+});
