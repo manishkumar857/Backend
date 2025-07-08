@@ -40,3 +40,12 @@ app.get("/:username/:id",(req,res)=>{
     let{username,id}=req.params;
     res.send(`welcome to page of @${username}.`);
 });
+
+app.get("/search",(req,res)=>{
+    let{q}=req.query;
+
+    if(!q){
+        res.send("nothing searched");
+    }
+    res.send(`<h1>search results for query : ${q}</h1>`);
+})
