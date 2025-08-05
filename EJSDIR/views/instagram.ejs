@@ -6,14 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>username @ <%= username %> </h1>
+    <h1>username @ <%=  data.name %> </h1>
     <button>Follow</button>
     <button>Message</button>
 
-    <ul>
-    <% for(let name of followers) { %>
-        <li><h2><%= name %></h2></li>
-    <% } %>
-    </ul>
+    <p>Followers = <%=  data.followers %> &nbsp;&nbsp;&nbsp;
+    Following = <%=  data.following %> </p>
+
+   
 </body>
 </html>
